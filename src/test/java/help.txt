@@ -1,1 +1,1 @@
-Répertoires utilisé pour les classes de test suivant la convention Maven
+Répertoires utilisés pour les classes de test suivant la convention Maven
