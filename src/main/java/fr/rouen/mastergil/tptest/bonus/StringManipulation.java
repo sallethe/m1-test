@@ -4,9 +4,9 @@ import java.util.HashSet;
 
 public class StringManipulation {
 
-
     public static boolean a(String s) {
-        if (s == null || s.length() == 0) return false;
+        if (s == null || s.length() == 0)
+            return false;
 
         s = s.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
 
@@ -21,7 +21,7 @@ public class StringManipulation {
 
     public int b(String s) {
         int count = 0;
-        HashSet<Character> substring = new HashSet<Character>();
+        HashSet<Character> substring = new HashSet<>();
         for (int i = 0; i < s.length(); i++) {
             for (int j = i; j < s.length(); j++) {
                 if (!substring.contains(s.charAt(j)))

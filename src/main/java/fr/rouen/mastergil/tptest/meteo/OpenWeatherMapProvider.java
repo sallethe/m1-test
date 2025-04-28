@@ -1,24 +1,23 @@
 package fr.rouen.mastergil.tptest.meteo;
 
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+import org.codehaus.jettison.json.JSONArray;
+import org.codehaus.jettison.json.JSONException;
+import org.codehaus.jettison.json.JSONObject;
+
 import com.sun.jersey.api.client.Client;
 import com.sun.jersey.api.client.ClientResponse;
 import com.sun.jersey.api.client.WebResource;
 import com.sun.jersey.api.client.config.ClientConfig;
 import com.sun.jersey.api.client.config.DefaultClientConfig;
 import com.sun.jersey.api.json.JSONConfiguration;
-import org.codehaus.jettison.json.JSONArray;
-import org.codehaus.jettison.json.JSONException;
-import org.codehaus.jettison.json.JSONObject;
-
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
 
 public class OpenWeatherMapProvider implements IWeatherProvider {
 
-
     private final static String URL_BASE = "http://api.openweathermap.org/data/2.5";
-
 
     @Override
     public List<Prevision> getForecastByCity(String city) {
@@ -64,4 +63,3 @@ public class OpenWeatherMapProvider implements IWeatherProvider {
         return previsions;
     }
 }
-

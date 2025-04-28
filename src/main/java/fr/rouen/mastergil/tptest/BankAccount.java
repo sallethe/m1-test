@@ -1,6 +1,5 @@
 package fr.rouen.mastergil.tptest;
 
-
 import java.text.MessageFormat;
 
 public class BankAccount {

@@ -4,8 +4,7 @@ import java.util.List;
 
 public class StationMeteo {
 
-    private IWeatherProvider weatherProvider;
-
+    private final IWeatherProvider weatherProvider;
 
     public StationMeteo(IWeatherProvider weatherProvider) {
         this.weatherProvider = weatherProvider;
@@ -14,8 +13,7 @@ public class StationMeteo {
     public static void main(String[] args) {
         System.out.println(
                 new StationMeteo(new OpenWeatherMapProvider())
-                        .majPrevision("Paris,FR")
-        );
+                        .majPrevision("Paris,FR"));
     }
 
     public List<Prevision> majPrevision(String city) {
